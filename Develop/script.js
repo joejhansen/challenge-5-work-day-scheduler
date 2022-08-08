@@ -4,6 +4,7 @@ var textArea = $(".textarea")
 var timeEl = $("#currentDay")
 var scheduleSpace = $("#scheduleSpace")
 var toDos = ["","","","","","","",""]
+var forms = $("form")
 
 // set the time at the top of the page
 function time(){
@@ -67,6 +68,6 @@ setInterval(timeColor, 1000)
 getToDos();
 
 saveBtn.on('click', saveText);
-saveBtn.on('submit', function(event){
+forms.on('submit', function(event){
     event.preventDefault();
 })
