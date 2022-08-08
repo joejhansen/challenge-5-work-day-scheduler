@@ -15,7 +15,8 @@ function time(){
 // saving text input values when you hit save
 function saveText(event){
     event.preventDefault();
-    var thisButton = $(event.target);
+    var thisButton = $(event.target.children[0].children[2]);
+    // console.log(event.target.children[0].children[2])
     var saveThisForm = thisButton.siblings(".textarea")
     var saveThisText = saveThisForm.val()
     var timeOfDay = parseInt(saveThisForm.attr("time"))
@@ -67,7 +68,5 @@ setInterval(timeColor, 1000)
 
 getToDos();
 
-saveBtn.on('click', saveText);
-forms.on('submit', function(event){
-    event.preventDefault();
-})
+// saveBtn.on('click', saveText);
+forms.on('submit', saveText);
