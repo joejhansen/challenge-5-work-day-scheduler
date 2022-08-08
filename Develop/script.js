@@ -11,7 +11,7 @@ function time(){
     timeEl.text(currentTime)
 }
 
-// what happens when you hit save
+// saving text input values when you hit save
 function saveText(event){
     event.preventDefault();
     var thisButton = $(event.target);
@@ -46,6 +46,7 @@ function timeColor(){
     
 }
 
+// fetching the todos in local storage if there are some.
 function getToDos(){
     var parseThis = localStorage.getItem('toDos')
     toDos = JSON.parse(parseThis)
