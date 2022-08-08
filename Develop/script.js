@@ -67,3 +67,6 @@ setInterval(timeColor, 1000)
 getToDos();
 
 saveBtn.on('click', saveText);
+saveBtn.on('submit', function(event){
+    event.preventDefault();
+})
