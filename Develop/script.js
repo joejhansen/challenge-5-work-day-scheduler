@@ -16,7 +16,6 @@ function time() {
 function saveText(event) {
     event.preventDefault();
     var thisButton = $(event.target.children[0].children[2]);
-    // console.log(event.target.children[0].children[2])
     var saveThisForm = thisButton.siblings(".textarea")
     var saveThisText = saveThisForm.val()
     var timeOfDay = parseInt(saveThisForm.attr("time"))
@@ -60,7 +59,6 @@ function getToDos() {
         }
     } else if (toDos === null){
         toDos = ['','','','','','','','','','']
-        console.log(toDos)
     }
 }
 
